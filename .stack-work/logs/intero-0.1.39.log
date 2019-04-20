@@ -1,0 +1,64 @@
+Configuring intero-0.1.39...
+Preprocessing executable 'intero' for intero-0.1.39..
+Building executable 'intero' for intero-0.1.39..
+[ 1 of 10] Compiling Intero.Compat    ( src/Intero/Compat.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/Intero/Compat.o )
+[ 2 of 10] Compiling GhciTypes        ( src/GhciTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/GhciTypes.o )
+[ 3 of 10] Compiling GhciMonad        ( src/GhciMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/GhciMonad.o )
+[ 4 of 10] Compiling GhciTags         ( src/GhciTags.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/GhciTags.o )
+[ 5 of 10] Compiling GhciInfo         ( src/GhciInfo.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/GhciInfo.o )
+[ 6 of 10] Compiling GhciFind         ( src/GhciFind.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/GhciFind.o )
+[ 7 of 10] Compiling Completion       ( src/Completion.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/Completion.o )
+[ 8 of 10] Compiling Paths_intero     ( .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/autogen/Paths_intero.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/Paths_intero.o )
+[ 9 of 10] Compiling InteractiveUI    ( src/InteractiveUI.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/InteractiveUI.o )
+
+[;1msrc/InteractiveUI.hs:116:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network’ is deprecated:
+      The high level Network interface is no longer supported. Please use Network.Socket.[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m116 |[0m[0m [;1m[35mimport qualified Network[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:117:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network.BSD’ is deprecated:
+      This platform dependent module is no longer supported.[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m117 |[0m[0m [;1m[35mimport Network.BSD[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:695:32: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘accept’ (imported from Network):
+    Deprecated: "The high level Network interface is no longer supported. Please use Network.Socket."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m695 |[0m[0m                   (h, _, _) <- [;1m[35mNetwork.accept[0m[0m sock
+[;1m[34m    |[0m[0m[;1m[35m                                ^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:731:12: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘getProtocolNumber’ (imported from Network.BSD):
+    Deprecated: "This platform dependent module is no longer supported."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m731 |[0m[0m   proto <- [;1m[35mgetProtocolNumber[0m[0m "tcp"
+[;1m[34m    |[0m[0m[;1m[35m            ^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:737:19: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘getHostByName’ (imported from Network.BSD):
+    Deprecated: "This platform dependent module is no longer supported."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m737 |[0m[0m        address <- [;1m[35mgetHostByName[0m[0m "127.0.0.1"
+[;1m[34m    |[0m[0m[;1m[35m                   ^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:738:32: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘aNY_PORT’ (imported from Network.Socket):
+    Deprecated: "Use defaultPort instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m738 |[0m[0m        bind sock (SockAddrInet [;1m[35maNY_PORT[0m[0m (hostAddress address))
+[;1m[34m    |[0m[0m[;1m[35m                                ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/InteractiveUI.hs:738:42: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘hostAddress’ (imported from Network.BSD):
+    Deprecated: "This platform dependent module is no longer supported."[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m738 |[0m[0m        bind sock (SockAddrInet aNY_PORT ([;1m[35mhostAddress[0m[0m address))
+[;1m[34m    |[0m[0m[;1m[35m                                          ^^^^^^^^^^^[0m[0m
+[0m[0m[0m[10 of 10] Compiling Main             ( src/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/intero/intero ...
+Installing executable intero in /home/threestrikes/src/moodleRoster/.stack-work/install/x86_64-linux/lts-13.17/8.6.4/bin
