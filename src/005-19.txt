@@ -1,0 +1,2 @@
+username,password,firstname,lastname,email,course1,group1,type1005-stuStudent1Student Class 005-19Student005-19@cc.milCommon CoreClass 005-191
+005-inst,CommonCore19!!,Instructor 005,Class 005-19,Instructor005-19@cc.mil,Common Core,Class 005-19,2
