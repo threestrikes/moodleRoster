@@ -1,0 +1,9 @@
+username,password,firstname,lastname,email,course1,group1,type1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-stu1,Student1,Student 1,Class 004-19,1Student004-19@cc.mil,Common Core,Class 004-19,1
+004-inst,CommonCore19!!,Instructor 004,Class 004-19,Instructor004-19@cc.mil,Common Core,Class 004-19,2

@@ -7,6 +7,4 @@ import Functions
 
 
 main :: IO ()
-main = do
-   
-      putStrLn rosterNumber
+main = rosterId2 

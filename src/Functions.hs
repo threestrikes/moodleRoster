@@ -1,53 +1,46 @@
 -- Contains all functions used to create the roster 
 module Functions
-    (rosterNumber
-    ,rosterYear
-    ,rosterId2
+    (
+    rosterId2
     ) where
 
 import System.IO
-import Data.Char
-
-rosterNumber = "007" -- change to readLn later
-rosterYear = "2019" -- change to readLn later
 
 promptLine :: String -> IO String 
 promptLine prompt = do
     putStr prompt 
     getLine
 
-classNumber2 getNumber = do 
-    getNumber  promptLine "What Number?"
--- userAccount 
-
--- -userName = 
-
--- -userEmail
-
--- -userPassword
-
--- -userCourse
 
 
 -- Creates roster ID
 rosterId2 = do  -- figure out how to add the correct type signature here
             classNumber <- promptLine "Class number? ";
             classYear <- promptLine "Class year? ";
-            numberStudents <- promptLine "How many Students? ";
-
+            
+            putStrLn "How many Students?";
+            numberStudents <- getLine
+            let numberStudentsInt = (read numberStudents :: Int )
+--            numberStudents <- promptLine "How many Students? ";
             let className = classNumber ++ "-" ++ classYear
-            let userLogin = "stu-" ++ classNumber
-            let userEmail = userLogin ++ "@commoncore.com"
-            let userPassword = userLogin ++ "12345"
-            let userCourse = "Common Core"
-            let s = "; "
-            let userAccount = (userLogin++s++className++s++userEmail++s++userPassword++s++userCourse)
             let fileName = className ++ ".txt"
 
-            writeFile fileName userAccount;
+            let accountStandard = "username,password,firstname,lastname,email,course1,group1,type1"  
+            let studentStandard = "\n" ++ classNumber ++ "-stu" ++ "1" ++ ",Student" ++ "1" ++ ",Student " ++"1,"++ "Class " ++ className ++ "," ++ "1" ++ "Student" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",1" 
+            let studentStandard2 = replicate numberStudentsInt (studentStandard)
+            let studentStandard3 = concat studentStandard2 
+            
+            let instructorStandard = classNumber ++ "-inst," ++ "CommonCore19!!," ++ "Instructor " ++ classNumber ++ ",Class " ++ className ++ ",Instructor" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",2"
+          
+            let userLogin = "stu-" ++ classNumber
+            let userEmail = userLogin ++ "@commoncore.com"
+            let userCourse = "Common Core"
+         
+            let accountList = accountStandard ++ studentStandard3 ++ "\n" ++ instructorStandard
+            
+            writeFile fileName accountList;
 
-            putStrLn ("Class " ++ className ++ " was created with " ++ numberStudents ++ " students!");
+            putStrLn ("Class " ++ className ++ " was successfully created with " ++ numberStudents ++ " Students and 1 Instructor account!");
 
-                 
-
-
+factorial 0 = 1
+factorial n = n * factorial (n-1)
