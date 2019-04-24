@@ -50,7 +50,7 @@ rosterId2 = do  -- figure out how to add the correct type signature here
             let studentStandard2 = replicate numberStudentsInt (studentStandard)
             let studentStandard3 = concat studentStandard2 
             
-            let instructorStandard = classNumber ++ "-inst," ++ "CommonCore19!!," ++ "Instructor " ++ classNumber ++ ",Class " ++ className ++ ",Instructor" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",2"
+            let instructorStandard = classNumber ++ "-inst," ++ "Instructor1," ++ "Instructor " ++ classNumber ++ ",Class " ++ className ++ ",Instructor" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",2"
           
             let userLogin = "stu-" ++ classNumber
             let userEmail = userLogin ++ "@commoncore.com"
