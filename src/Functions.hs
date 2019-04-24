@@ -28,11 +28,11 @@ rosterId2 = do  -- figure out how to add the correct type signature here
             let className = classNumber ++ "-" ++ classYear
             let fileName = className ++ ".txt"
 
-            let username = classNumber ++ "-stu"
+            let username = classNumber ++ "-stu" -- Try to use a tuple (string, int) and then convert it to a string to be used later
             let password = "Student1"
-            let firstname = "Student "
+            let firstname = "Student "  -- Try to use a tuple (string, int) and then convert it to a string to be used later
             let lastname = "Class " ++ className
-            let email = "Student" ++ className ++"@cc.mil"
+            let email = "Student" ++ className ++"@cc.mil" -- Try to use a tuple (string, int) and then convert it to a string to be used later
             let course1 = "Common Core"
             let group1 = lastname 
             let type1 = "1"
