@@ -62,5 +62,4 @@ rosterId2 = do  -- figure out how to add the correct type signature here
 
             putStrLn ("Class " ++ className ++ " was successfully created with " ++ numberStudents ++ " Students and 1 Instructor account!");
 
-factorial 0 = 1
-factorial n = n * factorial (n-1)
+

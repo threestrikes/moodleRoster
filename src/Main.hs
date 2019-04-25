@@ -3,8 +3,9 @@
 
 module Main where
 
-import Functions
-
+--import Functions
+import UserList 
 
 main :: IO ()
-main = rosterId2 
+main = do
+    generateUserList
