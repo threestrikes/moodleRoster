@@ -35,31 +35,20 @@ rosterId2 = do  -- figure out how to add the correct type signature here
             let email = "Student" ++ className ++"@cc.mil" -- Try to use a tuple (string, int) and then convert it to a string to be used later
             let course1 = "Common Core"
             let group1 = lastname 
-            let type1 = "1"
+            let type1 = "1" ++ "\n"
 
-            let line1 = "username,password,firstname,lastname,email,course1,group1,type1"  
+            let line1 = "username,password,firstname,lastname,email,course1,group1,type1" ++ "\n"  
             let studentLine = [username,password,firstname
                               ,lastname,email,course1,group1
                               ,type1
                               ]
 
             let concatStudentLine = toCommaSeparatedString studentLine
-
-            let studentStandard = "\n" ++ classNumber ++ "-stu" ++ "1" ++ ",Student" ++ "1" ++ ",Student " ++"1,"++ "Class " ++ className ++ "," ++ "1" ++ "Student" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",1" 
-            let studentStan = "\n" ++ classNumber ++ "-stu" 
-            let studentStandard2 = replicate numberStudentsInt (studentStandard)
-            let studentStandard3 = concat studentStandard2 
-            
             let instructorStandard = classNumber ++ "-inst," ++ "Instructor1," ++ "Instructor " ++ classNumber ++ ",Class " ++ className ++ ",Instructor" ++ className ++ "@cc.mil,Common Core,Class " ++ className ++ ",2"
-          
-            let userLogin = "stu-" ++ classNumber
-            let userEmail = userLogin ++ "@commoncore.com"
-            let userCourse = "Common Core"
-         
             let accountList = line1 ++ concatStudentLine ++ "\n" ++ instructorStandard
             
             writeFile fileName accountList;
 
-            putStrLn ("Class " ++ className ++ " was successfully created with " ++ numberStudents ++ " Students and 1 Instructor account!");
+            putStrLn ("Class " ++ className ++ " was successfully created with " ++ numberStudents ++ " Students and 1 Instructor account!")
 
 

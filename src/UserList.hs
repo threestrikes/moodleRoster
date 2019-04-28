@@ -6,34 +6,26 @@ module UserList
     ) where
 
 import Data.List 
+import Control.Monad
 
+classNum x = take 3 x
 
-addCommasToString :: [String] -> String
-addCommasToString = intercalate ","
-
-factorial :: (Integral a) => a -> a  
-factorial 0 = 1  
-factorial n = n * factorial (n - 1) 
-
+createStudent x y = forM_ [1..y] $ \y -> do
+    print $ show $ classNum x ++ "-stu" ++ (show y) ++ ",Student1,Student " ++ (show y) ++ ",Class " ++ x ++ "," ++ (show y) ++ "Student" ++ x ++ "@cc.mil,Common Core,Class " ++ x ++ ",1" 
 
 generateUserList = do 
     putStrLn "What's the class roster I.D.? (example 001-19)"
     classId <- getLine
     putStrLn "How many Students?"
     studentNumber <- getLine
-    let studentNumberInt = (read studentNumber :: Int )
+  
+    let studentNumberInt = (read studentNumber :: Integer )
+    let line1 = "username,password,firstname,lastname,email,course1,group1,type1" ++ "\n" 
+    let studentList = createStudent classId studentNumberInt 
+    let instructorList = (show classId) ++ "-inst," ++ "Instructor1," ++ "Instructor 1" ++ ",Class " ++ (show classId) ++ ",Instructor" ++ (show classId) ++ "@cc.mil,Common Core,Class " ++ (show classId) ++ ",2"
 
-
-    let classNum = take 3 classId
-    let studentTemplate = classNum ++ "-stu" ++ studentNumber ++ ",Student1,Student " ++ studentNumber ++ ",Class " ++ classId ++ "," ++ studentNumber ++ "Student" ++ classId ++ "@cc.mil,Common Core,Class " ++ classId ++ ",1"
-
-    let studentTemplateRep =  replicate 5 studentTemplate
-        
+    --let classTemplate = line1 ++ studentList ++ instructorList  
+    putStrLn $ "Class " ++ (show classId)++ " was successfully created with " ++ (show studentNumberInt) ++ " Students and 1 Instructor account!"
     
-    
-
-    --let fact1 factorial 0 = 1
-    --factorial n = n * factorial (n-1)
-
-    putStrLn studentTemplate 
-    
+    writeFile (classId ++ ".txt") line1
+    appendFile (classId ++ ".txt") 
